@@ -1,0 +1,41 @@
+/*Element Selector*/
+/* li {
+
+} */
+
+
+/*class Selector*/
+/* .hello {
+
+} */
+
+/*Id Selector */
+/* #name {
+
+} */
+
+
+/*Star Selector*/
+* {
+	border: 1px solid lightgrey;
+}
+
+/*Descendant Selector*/
+li a {
+	color: red;
+}
+
+/*Adjacent Selector*/
+h4 + ul {
+	border: 4px solid red;
+}
+
+/*Attribute Selector*/
+a[href="http://www.google.com"] {
+	background: blue;
+}
+
+/*nth of type Selector*/
+li:nth-of-type(odd){
+	background: purple;
+}

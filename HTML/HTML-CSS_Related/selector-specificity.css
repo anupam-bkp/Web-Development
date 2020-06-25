@@ -1,0 +1,33 @@
+/*Type Selector*/
+
+li{
+    background: yellow;
+}
+
+li a{
+    background: yellow;
+}
+
+li + a{
+    background: yellow;
+}
+
+/* Class, Attribute and Pseudo Selectors. */
+
+.hello{
+    background: yellow;
+}
+
+input[type="text"]{
+    background: yellow;
+}
+
+a:hover{                   /*pseudo selector*/
+    background: yellow;
+}
+
+/* Id Selectors */
+
+#hello{
+    background: yellow;
+}

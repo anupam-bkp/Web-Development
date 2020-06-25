@@ -1,0 +1,14 @@
+/* Element Selector */
+li{
+    border: 2px solid red;
+}
+
+/*Id Selector*/
+#special{
+    background: yellow;
+}
+
+/*Class Selector*/
+.completed{
+    text-decoration: line-through;
+}

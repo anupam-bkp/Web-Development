@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Basics</title>
+</head>
+<body>
+
+    <h2>Form Basics</h2>
+
+    <h3>Login Form</h3>
+    <!-- <form action="https://www.wikipedia.org" method="get"> -->
+    <form>
+        Username: <input type="text" name="username" placeholder="username" required><br><br>
+        Email: <input type="email" name="" id="" placeholder="email" required><br><br>
+        Password: <input type="password" name="password" id="" placeholder="password" required>
+        <input type="submit" value="Submit">
+    </form>
+
+    <h3>Below is Not a Form</h3>
+    <input type="text" placeholder="username">
+    <input type="password" placeholder="password">
+    <input type="button" value="Press Me">
+    <input type="submit" value="Submit">
+    
+    <!-- Form using label -->
+    <h3>Form for Screen Reader and accessibility Software Using Label and Nested Inputs</h3>
+    <form action="" method="get">
+        
+        <Label>
+            Username:
+            <input type="text" name="username" id="" placeholder="username">
+        </Label>
+        
+        <Label>
+            Password:
+            <input type="password" name="password" id="" placeholder="password">
+        </Label>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <!-- Form using label, for and id -->
+    <h3>Form for Screen Reader and accessibility Software Using Label For and id</h3>
+
+    <form action="" method="get">
+        
+        <Label for="username">Username:</Label>
+        <input id="username" type="text" name="user" placeholder="username">
+        
+        <Label for="password">Password:</Label>
+        <input id="password" type="password" name="pass" placeholder="password">
+
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>
