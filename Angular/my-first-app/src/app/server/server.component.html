@@ -1,0 +1,13 @@
+<h3>Hello From Server Component</h3>
+
+<!-- using string interpolation -->
+<p>{{'Server'}} With ID {{serverId}} is {{serverOnStatus}}</p>
+<p>{{'Server'}} With ID {{serverId}} is {{getServerOffStatus()}}</p>
+
+<!-- use of directive [ngStyle]="{style: expression}" -->
+<!-- use of directive [ngClass]="{cssClass: expression}" -->
+<p
+ [ngStyle]="{backgroundColor: getColor()}" 
+ [ngClass]="{online: serverStatus === 'online'}">
+ {{'server'}} with ID {{serverId}} is {{serverStatus}}
+</p>

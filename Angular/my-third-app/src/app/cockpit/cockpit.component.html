@@ -1,0 +1,32 @@
+<div class="row">
+    <div class="col-xs-12">
+      <p>Add new Servers or blueprints!</p>
+
+      <!-- Use of Two-way event binding -->
+      <label>Server Name</label>
+      
+      <!-- Use of Two-way Event binding -->
+      <!-- <input type="text" class="form-control" [(ngModel)]="newServerName"> -->
+
+      <!-- Use of Local Reference -->
+      <input type="text" 
+            class="form-control" 
+            #serverNameInput>
+      <label>Server Content</label>
+      
+      <!-- <input type="text" class="form-control" [(ngModel)]="newServerContent"> -->
+      <input type="text" 
+            class="form-control" 
+            #serverContentInput>
+
+      <br>
+
+      <!-- Use of Event-Binding -->
+      <button
+        class="btn btn-primary"
+        (click)="onAddServer(serverNameInput)">Add Server</button>
+      <button
+        class="btn btn-primary"
+        (click)="onAddBlueprint(serverNameInput)">Add Server Blueprint</button>
+    </div>
+  </div>

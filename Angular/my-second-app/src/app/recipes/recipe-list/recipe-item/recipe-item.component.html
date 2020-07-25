@@ -1,0 +1,23 @@
+<a 
+    style="cursor:pointer;"
+    [routerLink] = "[index]"
+    routerLinkActive="active"
+    class="list-group-item">
+    <!-- (click)= "onSelected()" -->
+
+ <div class="pull-left">
+     <h4 class="list-group-item-heading"> {{recipe.name}}</h4>
+     <p class="list-group-item-text">{{recipe.description}}</p>
+ </div>
+ 
+ <!-- <img src= "{{recipe.imagePath}}"  -- String interpolation-->
+ <!-- <img [src]="recipe.imagePath" -- Property binding-->
+
+ <span class="pull-right">
+     <img [src]="recipe.imagePath"
+     alt="{{recipe.name}}" 
+     class="img-responsive" 
+     style="max-height: 30 px;">
+ </span>
+</a>
+
