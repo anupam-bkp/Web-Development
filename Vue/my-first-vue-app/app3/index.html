@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second-Vue-App</title>
+
+    <script src="vue.js" ></script>
+    <script src="app3.js" defer></script>
+</head>
+<body>
+
+    <div id="app">
+
+        <h3>{{title}}</h3>
+        <hr>
+
+        <input type="text" v-model="name">
+        <p>{{name}}</p>
+
+        <br><hr><br>
+        <input type="text" v-on:keyup.enter.space="alertMe">
+
+    </div>
+
+    <!-- <script src="vue.js" ></script> -->
+    <!-- <script src="app.js" ></script> -->
+
+</body>
+</html>

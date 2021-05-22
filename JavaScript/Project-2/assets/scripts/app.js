@@ -14,7 +14,7 @@ const LOG_EVENT_GAME_OVER = 'GAME_OVER';
 let battleLog = [];
 let lastLoggedEntry;
 
-function getMaxLifeValues() {
+function getMaxLifeValues(){
   const enteredValue = prompt('Maximum life for you and the monster.', '100');
 
   const parsedValue = parseInt(enteredValue);

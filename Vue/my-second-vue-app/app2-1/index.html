@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First-Vue-App</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="app2-1.js" defer></script>
+</head>
+<body>
+
+    <div id="app">
+
+        <h3>{{title}}</h3>
+        <br><hr><br>
+
+        <p v-if="show">You can See Me! <span>Hello!!</span></p>
+        <p v-else>Now you can see Me!</p>
+        <p>Do you also see me?</p>
+
+        <br><br>
+
+        <button v-on:click="show = !show">Switch</button>
+        
+
+    </div>
+
+    <!-- <script src="vue.js" ></script> -->
+    <!-- <script src="app.js" ></script> -->
+
+</body>
+</html>

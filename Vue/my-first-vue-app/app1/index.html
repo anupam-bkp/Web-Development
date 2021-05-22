@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First-Vue-App</title>
+
+    <script src="vue.js" ></script>
+    <script src="app1.js" defer></script>
+</head>
+<body>
+
+    <div id="app">
+        <h2 v-once>{{title}}</h2>
+        <p>{{sayHello()}}</p>
+        <a v-bind:href="link">Goto Google</a>
+        <p v-html="completelink"></p>
+    </div>
+
+    <!-- <script src="vue.js" ></script> -->
+    <!-- <script src="app.js" ></script> -->
+
+</body>
+</html>

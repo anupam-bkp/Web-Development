@@ -1,0 +1,38 @@
+npm cache clean --force
+
+npm update
+
+========================================================================================================
+
+
+Something is broken in Angular 9.1.5 - if you run the following it should work:
+
+angular-porject>npm install @angular/core@9.1.4 @angular/animations@9.1.4 @angular/common@9.1.4 @angular/forms@9.1.4 @angular/platform-browser@9.1.4 @angular/router@9.1.4 @angular/platform-browser-dynamic@9.1.4 @angular/compiler@9.1.4 @angular/compiler-cli@9.1.4 @angular/language-service@9.1.4
+
+angular-porject>ng build
+
+Just spent about 4-5 hours trying to fix it myself...
+
+The issue seems to stem from using Angular CLI 9.1.4 with Angular 9.1.5 (most likely the compiler
+
+You'll see the issue when you do
+
+ng --version
+
+if you get:
+
+Angular CLI: 9.1.4
+Node: 12.16.3
+OS: win32 x64
+
+Angular: 9.1.5
+... animations, cli, common, compiler, compiler-cli, core, forms
+... language-service, platform-browser, platform-browser-dynamic
+... router
+Ivy Workspace: Yes
+
+===================================================================================================================
+
+npm install rxjs
+
+===================================================================================================================

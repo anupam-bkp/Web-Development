@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First-Vue-App</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="app2-2.js" defer></script>
+</head>
+<body>
+
+    <div id="app">
+
+        <h3>{{title}}</h3>
+        <br><hr><br>
+
+        <ul>
+            <li v-for="(ingredient, index) in ingredients"> {{index}} : {{ingredient}}</li>
+        </ul>
+
+       <template v-for="(ingredient, index) in ingredients">
+           <h6>{{index}} :: {{ingredient}}</h6>
+       </template> 
+
+       <br><hr><br>
+
+       <ul>
+        <li v-for="person in persons">
+            <div v-for="(value, key, index) in person">
+                {{index}} : {{key}} : {{value}}
+            </div>
+        </li>
+
+       </ul>
+
+    </div>
+
+    <!-- <script src="vue.js" ></script> -->
+    <!-- <script src="app.js" ></script> -->
+
+</body>
+</html>

@@ -1,0 +1,174 @@
+Some Basic information about HTML and JS.
+------------------------------------------
+
+Entire DOM i.e. all elements, attributes are child to root node 
+Document(document).
+
+Concept
+==========
+Select an element
+Manipulate selected element
+
+HTML DOM methods for selecting:-
+
+document.URL;
+document.head;
+document.body;
+document.links;
+
+The document comes with many methods for selecting elements:
+Below are main five methods:
+
+<body>
+    <h1>Hello</h1>
+    <h1>GoodBye</h1>
+
+    <ul>
+        <li id="highlight">List Item 1</li>
+        <li class="bolded">List Item 2</li>
+        <li class="bolded">List Item 3</li>
+    </ul>
+</body>
+
+1. document.getElementById();
+    --> Takes an element ID as argument and returns the one string
+        with a matching id.
+
+        let tag = document.getElementById("highlight");
+
+2. document.getElementsByClassName();
+    -->Takes a element class name as argument and returns a list of 
+        elements that have a matching class.
+
+        let tags = document.getElementsByClassName("bolded");
+
+3. document.getElementsByTagName();
+    --> Takes a element tag name as argument and returns a list of
+        a given tag name like <h1>, <body>, <li>, <P>.
+
+        let tags = document.getElementsByTagName("li");
+        let tags1 = document.getElementsByTagName("h1");
+        let tags2 = document.getElementsByTagName("head");
+        let tags3 = document.getElementsByTagName("body");
+
+4. document.querySelector();
+    --> Takes a id, class, tag  as argument and returns the first
+        element that matches a given CSS style selector. 
+
+        let h1 = document.querySelector("h1");
+        let li = document.querySelector("#highlight");
+        let li = document.querySelector(".bolded");    
+    
+5. document.querySelectorAll();
+    --> Takes a id, class, tag  as argument and returns a list of
+        elements that matches a given CSS style selector.  
+
+        let tags = document.querySelectorAll("h1");
+        let lis = document.querySelectorAll("li");
+        let bolded = document.querySelectorAll(".bolded");    
+
+DOM Manipulation:
+----------------
+
+Following are different ways of DOM manipulation:
+    --> Changing an element style -- color, size, background
+    --> Adding/Removing classes -- css class
+    --> Changing the content of a tag -- all the text contained in a given element.
+    --> Changing attributes (src, href etc.) -- attributes of an element
+
+style
+-----
+The style property is one way to manipulate element's style
+
+    //select
+    let tag = document.getElementById("highlight");
+    //Manipulate
+    tag.style.color = "blue";
+    tag.style.border = "10 px solid red";
+    tag.style.fontsize = "70px"
+
+Note:
+----
+    Rather than directly manipulating style with JS, we can 
+    define a CSS class and then toggle it on or off with JS.
+
+    Instead of above code, define a class in CSS
+        .some-class{
+            color: blue;
+            border: 10px solid red;
+        }
+
+    var tag = document.getElementById("highlight");
+    tag.classList.add("some-class");
+
+classList ==> A read only list that contains the classes for a 
+            given element.
+
+    tag.classList.add("some-class");
+    tag.classList.remove("some-class");
+    tag.classList.toggle("some-class"); //add if not present, remove if present
+
+textContent
+-----------
+
+    <p>
+        This is an <strong>awesome</strong> paragraph.
+    </p>
+
+    //Select the <p> tag
+        let tag = document.querySelector("p");
+    //Retrieve the text content
+        tag.textContent
+    //alter the textContent:
+        tag.textContent = "Some new text";
+
+innerHTML
+--------
+    Similar to textContent, except it returns a string of all the
+    HTML contained in a given element.
+
+    tag.innerHTML;
+    This is an <strong>awesome</strong> paragraph.
+    tag.innerHTML = "Some new <strong>awesome</strong> text";
+
+Attributes
+---------
+    Use getAttribute() and setAttribute() tot read and write 
+    attributes like src or href
+
+    <a href="www.google.com">I am a link</a>
+    
+    let link = document.querySelector("a");
+    link.getAttribute("href");
+    link.setAttribute("href", "www.dogs.com");
+
+    <img src="logo.png">
+
+    let image = document.querySelector("img");
+    image.setAttribute("src", "coorgi.png");
+
+----------------------------------------------------
+==> Events are everywhere:
+
+    1. Clicking on a button
+    2. Hovering over a link
+    3. Dragging and Dropping
+    4. Pressing the Enter Key
+
+--> We select an element and then add an event listener
+
+--> To add a listener, we use a method called addEventListener
+
+    element.addEventListener(type, functionToCall);
+
+    var button = document.querySelector("button");
+    button.addEventListener("click", function(){
+        console.log("Someone clicked the button");
+    });
+
+
+
+
+
+--------------------------------------------------------------------------
+console.dir(variable_name) --> to log javascript object from html format

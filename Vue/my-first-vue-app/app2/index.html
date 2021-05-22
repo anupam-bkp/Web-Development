@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second-Vue-App</title>
+
+    <script src="vue.js" ></script>
+    <script src="app2.js" defer></script>
+</head>
+<body>
+
+    <div id="app">
+
+        <h3>{{title}}</h3>
+        <hr>
+        <button v-on:click="increase">Click Me</button>
+        <p>{{counter}}</p>
+
+        <br><hr><br>
+        <p v-on:mousemove="updateCoordinates">
+            Co-ordinates:{{x}} / {{y}}
+            - <span v-on:mousemove.stop>Dead Spot</span>    
+        </p>
+            <!-- Usage of event modifier stop -->
+
+        <br><hr><br>
+
+        <button v-on:click="incrementBy2(2, $event)">Increment 2</button>
+        <p>{{newCounter}}</p>
+
+    </div>
+
+    <!-- <script src="vue.js" ></script> -->
+    <!-- <script src="app.js" ></script> -->
+
+</body>
+</html>
